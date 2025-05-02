@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ローマ字 タイピングゲーム</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <div class="character-area">
+        <img
+          id="character"
+          src="character_normal.png"
+          alt="キャラクター"
+          width="150"
+        />
+      </div>
+
+      <h1>タイピングゲーム</h1>
+      <p class="hiragana-display">あ</p>
+      <p class="romaji-display">a</p>
+      <p class="input-progress"></p>
+      <p class="message"></p>
+      <p class="score-display"></p>
+      <button id="restart-btn" style="display: none">もう一度あそぶ</button>
+    </div>
+
+    <audio id="correct-sound" src="correct.mp3" preload="auto"></audio>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
