@@ -10,6 +10,11 @@ $(document).ready(function () {
     { hira: "く", roma: "ku" },
     { hira: "け", roma: "ke" },
     { hira: "こ", roma: "ko" },
+    { hira: "さ", roma: "sa" },
+    { hira: "し", roma: "si" },
+    { hira: "す", roma: "su" },
+    { hira: "せ", roma: "se" },
+    { hira: "そ", roma: "so" },
   ];
 
   let current,
