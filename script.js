@@ -15,6 +15,11 @@ $(document).ready(function () {
     { hira: "す", roma: "su" },
     { hira: "せ", roma: "se" },
     { hira: "そ", roma: "so" },
+    { hira: "た", roma: "ta" },
+    { hira: "ち", roma: "ti" },
+    { hira: "つ", roma: "tu" },
+    { hira: "て", roma: "te" },
+    { hira: "と", roma: "to" },
   ];
 
   let current,
