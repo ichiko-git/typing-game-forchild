@@ -20,6 +20,11 @@ $(document).ready(function () {
     { hira: "つ", roma: "tu" },
     { hira: "て", roma: "te" },
     { hira: "と", roma: "to" },
+    { hira: "な", roma: "na" },
+    { hira: "に", roma: "ni" },
+    { hira: "ぬ", roma: "nu" },
+    { hira: "ね", roma: "ne" },
+    { hira: "の", roma: "no" },
   ];
 
   let current,
