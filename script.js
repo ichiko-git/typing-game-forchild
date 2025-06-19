@@ -57,6 +57,18 @@ $(document).ready(function () {
 
   const correctSound = document.getElementById("correct-sound");
 
+  // プログレスバーを更新する関数
+  function updateProgress() {
+    const progress = (questionCount / 10) * 100;
+    const questionNumber = questionCount + 1;
+    $(".progress-fill").css("width", progress + "%");
+    if (questionNumber <= 10) {
+      $(".progress-text").text(`問題 ${questionNumber} / 10`);
+    } else {
+      // 更新しない
+    }
+  }
+
   function setNewCharacter() {
     current = data[Math.floor(Math.random() * data.length)];
     inputBuffer = "";
@@ -77,6 +89,7 @@ $(document).ready(function () {
 
   function nextQuestion() {
     questionCount++;
+    updateProgress(); // プログレスバーを更新
     if (questionCount >= 10) {
       endGame();
     } else {
@@ -109,8 +122,11 @@ $(document).ready(function () {
       inputBuffer += key;
       $(".input-progress").text(inputBuffer);
 
-      if (current.roma.startsWith(inputBuffer)) {
-        if (inputBuffer === current.roma) {
+      // 入力バッファを大文字に変換して比較
+      const inputBufferUpper = inputBuffer.toUpperCase();
+
+      if (current.roma.startsWith(inputBufferUpper)) {
+        if (inputBufferUpper === current.roma) {
           $(".message").text("すごい！できたね！");
           playCorrectSound();
           showCharacter("happy");
@@ -132,6 +148,7 @@ $(document).ready(function () {
     correctCount = 0;
     $("#restart-btn").hide();
     $(".score-display").text("");
+    updateProgress(); // プログレスバーをリセット
     setNewCharacter();
   });
 
