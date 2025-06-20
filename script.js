@@ -54,6 +54,7 @@ $(document).ready(function () {
     correctCount = 0;
 
   let answered = false;
+  let gameStarted = false;
 
   const correctSound = document.getElementById("correct-sound");
 
@@ -67,6 +68,28 @@ $(document).ready(function () {
     } else {
       // 更新しない
     }
+  }
+
+  // ゲームを開始する関数
+  function startGame() {
+    $("#start-screen").hide();
+    $("#game-container").show();
+    gameStarted = true;
+    questionCount = 0;
+    correctCount = 0;
+    updateProgress();
+    setNewCharacter();
+  }
+
+  // スタート画面に戻る関数
+  function returnToStart() {
+    $("#game-container").hide();
+    $("#start-screen").show();
+    $("#restart-btn").hide();
+    gameStarted = false;
+    questionCount = 0;
+    correctCount = 0;
+    answered = false;
   }
 
   function setNewCharacter() {
@@ -113,7 +136,13 @@ $(document).ready(function () {
     $("#character").attr("src", imgSrc);
   }
 
+  // スタートボタンのクリックイベント
+  $("#start-btn").click(function () {
+    startGame();
+  });
+
   $(document).on("keydown", function (e) {
+    if (!gameStarted) return; // ゲームが開始されていない場合は無視
     if ($("#restart-btn").is(":visible")) return;
     if (answered) return; // すでに正解したら無視
 
@@ -144,13 +173,6 @@ $(document).ready(function () {
   });
 
   $("#restart-btn").click(function () {
-    questionCount = 0;
-    correctCount = 0;
-    $("#restart-btn").hide();
-    $(".score-display").text("");
-    updateProgress(); // プログレスバーをリセット
-    setNewCharacter();
+    returnToStart();
   });
-
-  setNewCharacter();
 });
