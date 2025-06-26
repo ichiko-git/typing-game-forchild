@@ -129,9 +129,9 @@ $(document).ready(function () {
   }
 
   function showCharacter(expression) {
-    let imgSrc = "character_normal.png";
-    if (expression === "happy") imgSrc = "character_happy.png";
-    if (expression === "sad") imgSrc = "character_sad.png";
+    let imgSrc = "images/character_normal.png";
+    if (expression === "happy") imgSrc = "images/character_happy.png";
+    if (expression === "sad") imgSrc = "images/character_sad.png";
 
     $("#character").attr("src", imgSrc);
   }

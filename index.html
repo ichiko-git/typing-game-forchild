@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>ローマ字 タイピングゲーム</title>
+    <link rel="icon" href="images/favicon.png" type="image/png" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -11,7 +12,11 @@
       <div class="start-container">
         <h1>ローマ字 タイピングゲーム</h1>
         <div class="character-area">
-          <img src="character_normal.png" alt="キャラクター" width="150" />
+          <img
+            src="images/character_normal.png"
+            alt="キャラクター"
+            width="150"
+          />
         </div>
         <p class="game-description">
           ひらがなを見て、ローマ字をタイピングしよう！<br />
@@ -26,7 +31,7 @@
       <div class="character-area">
         <img
           id="character"
-          src="character_normal.png"
+          src="images/character_normal.png"
           alt="キャラクター"
           width="150"
         />
@@ -47,10 +52,12 @@
       <p class="input-progress"></p>
       <p class="message"></p>
       <p class="score-display"></p>
-      <button id="restart-btn" class="btn" style="display: none">もう一度あそぶ</button>
+      <button id="restart-btn" class="btn" style="display: none">
+        もう一度あそぶ
+      </button>
     </div>
 
-    <audio id="correct-sound" src="correct.mp3" preload="auto"></audio>
+    <audio id="correct-sound" src="audio/correct.mp3" preload="auto"></audio>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
