@@ -22,7 +22,15 @@
           ひらがなを見て、ローマ字をタイピングしよう！<br />
           10問正解を目指してがんばってね！
         </p>
-        <button id="start-btn" class="btn">ゲームスタート</button>
+        <div class="level-selection">
+          <h3>レベルを選んでね</h3>
+          <button id="level1-btn" class="btn level-btn">
+            レベル1（1文字）
+          </button>
+          <button id="level2-btn" class="btn level-btn">
+            レベル2（2文字）
+          </button>
+        </div>
       </div>
     </div>
 
@@ -38,6 +46,8 @@
       </div>
 
       <h1>タイピングゲーム</h1>
+      <div class="level-display" id="level-display">レベル1</div>
+      <div class="timer-display" id="timer-display">時間: 00秒</div>
 
       <!-- プログレスバーを追加 -->
       <div class="progress-container">

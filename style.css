@@ -2,7 +2,7 @@ body {
   font-family: "Arial", sans-serif;
   background-color: #fffde7;
   text-align: center;
-  padding: 50px;
+  padding: 20px;
 }
 
 /* スタート画面のスタイル */
@@ -16,7 +16,7 @@ body {
 .start-container {
   background-color: #ffffff;
   border-radius: 20px;
-  padding: 40px;
+  padding: 30px;
   display: inline-block;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   max-width: 500px;
@@ -24,15 +24,15 @@ body {
 
 .start-container h1 {
   color: #ff7043;
-  margin-bottom: 30px;
-  font-size: 32px;
+  margin-bottom: 20px;
+  font-size: 28px;
 }
 
 .game-description {
-  font-size: 18px;
+  font-size: 16px;
   color: #666;
   line-height: 1.6;
-  margin: 30px 0;
+  margin: 20px 0;
 }
 
 .btn {
@@ -59,14 +59,17 @@ body {
 .game-container {
   background-color: #ffffff;
   border-radius: 20px;
-  padding: 30px;
+  padding: 25px;
   display: inline-block;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 90%;
+  height: 800px;
 }
 
 /* プログレスバーのスタイル */
 .progress-container {
-  margin: 20px 0;
+  margin: 15px 0;
   text-align: center;
 }
 
@@ -95,40 +98,90 @@ body {
 }
 
 .hiragana-display {
-  font-size: 80px;
-  margin: 10px 0;
+  font-size: 60px;
+  margin: 8px 0;
   color: #ff7043;
 }
 
 .romaji-display {
-  font-size: 40px;
+  font-size: 32px;
   color: #5c6bc0;
 }
 
 .input-progress {
-  font-size: 32px;
+  font-size: 28px;
   color: #00796b;
-  height: 40px;
+  height: 35px;
 }
 
 .message {
-  font-size: 24px;
-  margin-top: 20px;
+  font-size: 20px;
+  margin-top: 15px;
 }
 
 .score-display {
-  /* font-size: 28px;
-  margin-top: 20px;
-  color: #d32f2f; */
-  display: none;
+  font-size: 20px;
+  margin-top: 15px;
+  color: #d32f2f;
+  line-height: 1.4;
 }
 
 #restart-btn {
-  margin-top: 20px;
-  font-size: 20px;
+  margin-top: 15px;
+  font-size: 18px;
   padding: 10px 20px;
 }
 
 .character-area {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+}
+
+/* レベル選択のスタイル */
+.level-selection {
+  margin: 20px 0;
+}
+
+.level-selection h3 {
+  color: #ff7043;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.level-btn {
+  display: block;
+  margin: 8px auto;
+  width: 200px;
+  font-size: 16px;
+}
+
+.level-btn:first-of-type {
+  background: linear-gradient(45deg, #4caf50, #8bc34a);
+}
+
+.level-btn:last-of-type {
+  background: linear-gradient(45deg, #ff9800, #ffc107);
+}
+
+/* レベル表示のスタイル */
+.level-display {
+  font-size: 18px;
+  color: #ff7043;
+  font-weight: bold;
+  margin: 8px 0;
+  padding: 6px 12px;
+  background-color: #fff3e0;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+/* タイマー表示のスタイル */
+.timer-display {
+  font-size: 16px;
+  color: #5c6bc0;
+  font-weight: bold;
+  margin: 8px 0;
+  padding: 5px 10px;
+  background-color: #e8eaf6;
+  border-radius: 10px;
+  display: inline-block;
 }
